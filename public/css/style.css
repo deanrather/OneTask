@@ -1,0 +1,281 @@
+body {
+	font-family: "Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+	line-height: normal;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	text-align: justify;
+	font-size: 80%;
+	padding-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 160%;
+	font-weight: bold;
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 0.5em 0 0;
+	border-bottom: 1px solid #8CACBB;
+	clear: left;
+}
+
+h1 {
+	padding-left: 5px;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 100%;
+	margin: 0px;
+	border-bottom: 1px solid #CCCCCC;
+}
+h2 small {
+	font-size: 50%;
+	margin-left: 10px;
+}
+
+p {
+	margin: 0 0 1em;
+	display: block;
+	line-height: 1.25em;
+	color: #333333;
+}
+
+ul {
+	line-height: 1.5em;
+	list-style-image: none;
+	list-style-type: square;
+	margin: 0 0 0.5em 1.5em;
+	color: #333333;
+}
+
+li {
+	margin-left: 10px;
+}
+
+pre {
+	border: 1px dashed #8CACBB;
+	background-color: #DEE7EC;
+	font-size: 120%;
+	overflow: auto;
+	padding: 0.5em;
+	color: #333333;
+}
+
+.spacer {
+	margin: 0px 10px;
+	padding: opx 10px;
+}
+
+div.borderedBox {
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+}
+
+div.menu {
+	display: none;
+}
+
+a {
+	color: #3366FF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
+.hidden {
+	display: none;
+}
+
+.not_hidden {
+	display: inline;
+}
+
+div.topBar {
+	text-align: right;
+	padding: 5px;
+}
+
+div.topBar h1 {
+	float: left;
+	border-bottom: 0;
+	margin-bottom: 5px;
+}
+
+div.topBar h1 a {
+	background-color: rgb(222, 231, 236);
+	padding: 5px 10px 5px 10px;
+	line-height: 1;
+	border: 1px solid rgb(0, 0, 150);
+	color: black;
+	font-family: arial;
+}
+
+div.topBar h1 a:hover {
+	background-color: rgb(216, 225, 230);
+	div.topBar h1 a span {color: red;}
+}
+
+div.description {
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 110%;
+	line-height: 1.5em;
+}
+
+ul.reportForm {
+	width: 400px;
+}
+
+ul.reportForm li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+ul.reportForm li.time input {
+	width: 20px;
+}
+
+ul.reportForm li.title input {
+	width: 100%;
+}
+
+ul.reportForm li.description textarea {
+	width: 100%;
+}
+
+ul.reportForm li.submit {
+	text-align: center;
+}
+
+ul.reportForm li.submit input {
+	width: 100px;
+}
+
+ul.reportForm li.type select,
+ul.reportForm li.who select {
+	width: 100%;
+}
+
+ul.reportForm li.before p,
+ul.reportForm li.after p {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	text-align: left;
+}
+
+table.highlight tr:hover {
+	background-color: #EEEEFF;
+}
+
+table td {
+	padding: 0 10px 0 0;
+}
+
+div.topBar form {
+	display: inline;
+}
+
+div.topBar input {
+	width: 55px;
+}
+
+thead {
+	font-weight: bold;
+}
+
+div.adminPage input,
+div.adminPage select,
+div.editProfilePage input,
+div.editProfilePage select,
+div.loginPage input,
+div.loginPage select {
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+div.taskBody textarea {
+	width: 300px;
+}
+
+div.taskBody div.description {
+	margin-bottom: 0px;
+}
+
+div.taskBody div.details {
+	float: left;
+	width: 50%;
+}
+
+div.taskBody div.comments {
+	float: left;
+	width: 50%;
+}
+
+div.taskBody div.changeStatus {
+	
+}
+
+div.taskBody div.details ul li {
+	line-height: 1.3em;
+}
+
+
+
+div.note {
+	margin: 10px;
+	font-weight: bold;
+	padding: 0;
+	height: 40px;
+	vertical-align: center;
+}
+
+div.note.ok {
+	background-color: #F0FDDE;
+	border: 1px solid #A1DF4A;
+	color: #33AA00;
+}
+
+div.note.error {
+	background-color: #FFF8D1;
+	border: 1px solid #E5CA34;
+	color: #CC0000;
+}
+
+div.note.note span {
+	text-align: center;
+	color: white;
+	display: inline;
+	font-size: 200%;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	float: left;
+	line-height: 35px;
+}
+
+div.note.ok span {
+	background-color: #A1DF4A;
+}
+
+div.note.error span {
+	background-color: #E5CA34;
+}
+
+div.note p {
+	margin-top: 10px;
+	margin-right: 10px;
+}

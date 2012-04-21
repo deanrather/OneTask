@@ -1,0 +1,10 @@
+BUGS
+
+TODO
+update dbase interaction to take advantage of framework's features?
+update note/error usage to take advantage of framework's features?
+
+DONE
+
+NOTES
+
