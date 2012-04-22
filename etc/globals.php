@@ -1,4 +1,4 @@
-<?php
+<?php 
 	/**
 	 * Good for HTML that came from the database and needs to be displayed.
 	 */

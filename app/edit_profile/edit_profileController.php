@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class edit_profileController extends controller
 	{
 		function indexView()

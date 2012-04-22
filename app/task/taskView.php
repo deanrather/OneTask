@@ -20,7 +20,7 @@
 			<li>Last Modified: <b><?php echo $this->taskUpdateTime?></b></li>
 		</ul>
 
-		<?php
+		<?php 
 		if(count($this->beforeMe))
 		{
 			print '<h4>Can\'t be done till after:</h4>';

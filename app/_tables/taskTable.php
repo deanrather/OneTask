@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class taskTable extends table
 	{
 		var $table = 'ot_task';

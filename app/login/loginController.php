@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class loginController extends controller
 	{
 		function indexView()

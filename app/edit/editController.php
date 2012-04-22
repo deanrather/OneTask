@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class editController extends controller
 	{
 		function indexView()

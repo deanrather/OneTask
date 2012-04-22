@@ -4,7 +4,7 @@
 	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
 	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	
-	<? if(!$this->mine) { ?>
+	<?php if(!$this->mine) { ?>
 		<h2>Change User Type</h2>
 		<form method="post" action="">
 			<input type="hidden" name="action" value="change_user_type" />
@@ -12,7 +12,7 @@
 			<label>
 				User Type:<br />
 				<select name="newUserType">
-				<?
+				<?php 
 					foreach($this->userTypes as $userType)
 					{
 						$id		= $userType['user_type_id'];
@@ -31,31 +31,31 @@
 			<input type="submit" value="Change Type" />
 		</form>
 		
-		<? if($this->otherUserStatus){ ?>
+		<?php if($this->otherUserStatus){ ?>
 			<h2>Disable Account</h2>
 			<form method="post" action="">
 				<input type="hidden" name="action" value="disable_account" />
 				<input type="submit" value="DISABLE" />
 			</form>
-		<? }else{ // Account is disabled ?>
+		<?php }else{ // Account is disabled ?>
 			<h2>Enable Account</h2>
 			<form method="post" action="">
 				<input type="hidden" name="action" value="enable_account" />
 				<input type="submit" value="ENABLE" />
 			</form>
-		<? } // endif account enabled / disabled. ?>
-	<? } // endif looking at someone else's account. ?>
+		<?php } // endif account enabled / disabled. ?>
+	<?php } // endif looking at someone else's account. ?>
 	
 	<h2>Change Password</h2>
 	<form method="post" action="">
 		<input type="hidden" name="action" value="change_password" />
 		
-		<?if($this->mine){?>
+		<?php if($this->mine){?>
 			<label>
 				Old Password:<br />
 				<input type="password" name="old_password" />
 			</label><br />
-		<?} // Endif my own profile ?>
+		<?php } // Endif my own profile ?>
 		
 		<label>
 			New Password:<br />

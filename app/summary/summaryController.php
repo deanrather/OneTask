@@ -1,4 +1,4 @@
-<?php
+<?php 
 	/*
 	1) find beginnings.
 	Beginnings depend on nothing.

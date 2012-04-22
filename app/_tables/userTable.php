@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class userTable extends table
 	{
 		var $table = 'ot_user';

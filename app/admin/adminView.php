@@ -10,13 +10,13 @@
 		<li><a href="admin?action=createUser">Create User</a></li>
 	</ul>
 	
-	<?
+	<?php 
 		if(isset($_GET['action']) && $_GET['action']=='viewUsers')
 		{
 	?>
 		<h2>View Users</h2>
 		<table class="highlight">
-		<?
+		<?php 
 			foreach($this->users as $user)
 			{
 				$id		= $user['user_id'];
@@ -33,7 +33,7 @@
 			}
 		?>
 		</table>
-	<?
+	<?php 
 		} // Endif view users
 		elseif(isset($_GET['action']) && $_GET['action']=='createUser')
 		{
@@ -64,7 +64,7 @@
 			<label>
 				User Type:<br />
 				<select name="user_type">
-				<?
+				<?php 
 					foreach($this->userTypes as $userType)
 					{
 						$id		= $userType['user_type_id'];
@@ -78,7 +78,7 @@
 			
 			<input type="submit" value="Create" />
 		</form>
-	<?
+	<?php 
 		}
 	?>
 </div>

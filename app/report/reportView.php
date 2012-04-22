@@ -25,7 +25,7 @@
 				<label>
 					Type:<br />
 					<select name="type">
-						<?
+						<?php 
 							foreach($this->taskTypes as $taskType)
 							{
 								$id		= $taskType['task_type_id'];
@@ -45,7 +45,7 @@
 					Assign To:<br />
 					<select name="developer">
 						<option value="0">No One</option>
-						<?
+						<?php 
 							foreach($this->users as $user)
 							{
 								$id		= $user['user_id'];
@@ -74,7 +74,7 @@
 			<li class="after">
 				<a href="#" onclick="show('predecessors'); return false;"><b>Can't be done until after...</b></a><br />
 				<div id="predecessors"<?php echo (count($this->predecessors) ? '' : ' class="hidden"')?>>
-					<?
+					<?php 
 						foreach($this->tasks as $task)
 						{
 							$id		= $task['task_id'];
@@ -86,14 +86,14 @@
 							<input type="checkbox" value="<?php echo $id?>" name="predecessors[]" <?php echo ($checked?'checked="checked"':'')?> />
 							<a href="task/<?php echo $id?>" target="_blank" title="<?php echo htmlspecialchars($desc)?>"><?php echo $title?></a>
 						</p>
-					<? } // End foreach predecessor ?>
+					<?php } // End foreach predecessor ?>
 				</div>
 			</li>
 			
 			<li class="before">
 				<a href="#" onclick="show('successors'); return false;"><b>Must be done before...</b></a><br />
-				<div id="successors"<?if(!count($this->successors))print' class="hidden"'?>>
-					<?
+				<div id="successors"<?php if(!count($this->successors))print' class="hidden"'?>>
+					<?php 
 						reset($this->tasks);
 						foreach($this->tasks as $task)
 						{
@@ -106,7 +106,7 @@
 							<input type="checkbox" value="<?php echo $id?>" name="successors[]" <?php echo ($checked?'checked="checked"':'')?> />
 							<a href="task/<?php echo $id?>" target="_blank" title="<?php echo htmlspecialchars($desc)?>"><?php echo $title?></a>
 						</p>
-					<? } // End foreach predecessor ?>
+					<?php } // End foreach predecessor ?>
 				</div>
 			</li>
 			

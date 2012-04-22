@@ -19,15 +19,15 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?foreach($this->tasks as $task){?>
+		<?php foreach($this->tasks as $task){?>
 			<tr>
 				<td><?php echo $task->id?></td>
 				<td>
-					<?if($task->statusID==3)echo'<strong>';?>
-					<?if($task->statusID>3)echo'<del>';?>
+					<?php if($task->statusID==3) echo '<strong>';?>
+					<?php if($task->statusID>3) echo '<del>';?>
 					<a href="../task/<?php echo $task->id?>"><?php echo stripPad($task->name,50)?></a>
-					<?if($task->statusID>3)echo'</del>';?>
-					<?if($task->statusID==3)echo'</strong>';?>
+					<?php if($task->statusID>3) echo '</del>';?>
+					<?php if($task->statusID==3) echo '</strong>';?>
 				</td>
 				<td><?php echo $task->type?></td>
 				<td><?php echo $task->reporter?></td>
@@ -38,7 +38,7 @@
 				<td><?php echo displayMinutes($task->time)?></td>
 				<td><?php echo $task->statusName?></td>
 			</tr>
-		<?} // End foreach task ?>
+		<?php } // End foreach task ?>
 		</tbody>
 	</table>
 </div>

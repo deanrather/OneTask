@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class projectTable extends table
 	{
 		var $table = 'ot_project';

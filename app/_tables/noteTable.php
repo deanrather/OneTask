@@ -1,4 +1,4 @@
-<?php
+<?php 
 	class noteTable extends table
 	{
 		var $table = 'ot_note';
