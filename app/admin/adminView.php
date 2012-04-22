@@ -1,8 +1,8 @@
-<?=$this->topBar?>
+<?php echo $this->topBar?>
 <h1>Admin</h1>
 <div class="spacer adminPage">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	<ul class="menu">
 		<li><a href="task/list">Manage Tasks</a></li>
 		<li><a href="admin/projects">Manage Projects</a></li>
@@ -41,11 +41,11 @@
 		<h2>Create User</h2>
 		<form method="post" action="">
 			<input type="hidden" name="action" value="create_user" id="defaultCursor" />
-			<?=$this->addJS('document.getElementById("defaultCursor").focus();')?>
+			<?php echo $this->addJS('document.getElementById("defaultCursor").focus();')?>
 			
 			<label>
 				Username:<br />
-				<input type="text" name="username" value="<?=$this->username?>"/>
+				<input type="text" name="username" value="<?php echo $this->username?>"/>
 			</label>
 			<br />
 			

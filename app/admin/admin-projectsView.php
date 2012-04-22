@@ -1,8 +1,8 @@
-<?=$this->topBar?>
+<?php echo $this->topBar?>
 <h1>Admin</h1>
 <div class="spacer">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	<ul class="menu">
 		<li><a href="../task/list">Manage Tasks</a></li>
 		<li><a href="../admin/projects">Manage Projects</a></li>
@@ -15,18 +15,18 @@
 		<?php foreach($this->projects as $project) { ?>
 			<tr>
 				<?php if($project->project_status) { ?>
-					<td><?=$project->project_name?></td>
+					<td><?php echo $project->project_name?></td>
 					<td>
 						<form method="post" action="">
-							<input type="hidden" name="id" value="<?=$project->project_id?>" />
+							<input type="hidden" name="id" value="<?php echo $project->project_id?>" />
 							<input type="submit" name="action" value="Delete" />
 						</form>
 					</td>
 				<?php } else { // Project is disabled ?>
-					<td><strike><?=$project->project_name?></strike></td>
+					<td><strike><?php echo $project->project_name?></strike></td>
 					<td>
 						<form method="post" action="">
-							<input type="hidden" name="id" value="<?=$project->project_id?>" />
+							<input type="hidden" name="id" value="<?php echo $project->project_id?>" />
 							<input type="submit" name="action" value="Enable" />
 						</form>
 					</td>

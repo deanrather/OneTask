@@ -1,8 +1,8 @@
-<?=$this->topBar?>
-<h1>Edit <?=(!$this->mine ? $this->otherUserName.'\'s ' : '')?>Profile</h1>
+<?php echo $this->topBar?>
+<h1>Edit <?php echo (!$this->mine ? $this->otherUserName.'\'s ' : '')?>Profile</h1>
 <div class="spacer editProfilePage">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	
 	<? if(!$this->mine) { ?>
 		<h2>Change User Type</h2>
@@ -69,5 +69,5 @@
 		
 		<input type="submit" value="Change Password" />
 	</form>
-	<?=($this->mine ? '' : '<br /><a href="admin?action=viewUsers">Back</a>')?>
+	<?php echo ($this->mine ? '' : '<br /><a href="admin?action=viewUsers">Back</a>')?>
 </div>

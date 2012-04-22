@@ -1,23 +1,23 @@
-<?=$this->topBar?>
+<?php echo $this->topBar?>
 <h1>Report a Task</h1>
 <div class="spacer">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	<form method="post" action="">
 		<input type="hidden" name="add_task" value="true" />
 		<ul class="reportForm">
 			<li class="title">
 				<label>
 					Title: <br />
-					<input type="text" name="title" value="<?=$this->title?>" id="defaultCursor" />
-					<?=$this->addJS('document.getElementById("defaultCursor").focus();')?>
+					<input type="text" name="title" value="<?php echo $this->title?>" id="defaultCursor" />
+					<?php echo $this->addJS('document.getElementById("defaultCursor").focus();')?>
 				</label>
 			</li>
 			
 			<li class="description">
 				<label>
 					Description: <br />
-					<textarea name="description" rows="5" cols="45"><?=$this->desc?></textarea>
+					<textarea name="description" rows="5" cols="45"><?php echo $this->desc?></textarea>
 				</label>
 			</li>
 			
@@ -63,17 +63,17 @@
 			<li class="time">
 				<label>
 					Estimated Development Time:
-					<input type="text" name="estimated_dev_hours" value="<?=$this->estDevHours?>" />
+					<input type="text" name="estimated_dev_hours" value="<?php echo $this->estDevHours?>" />
 				</label>
 				<label>
 					:
-					<input type="text" name="estimated_dev_minutes" value="<?=$this->estDevMinutes?>" />
+					<input type="text" name="estimated_dev_minutes" value="<?php echo $this->estDevMinutes?>" />
 				</label>
 			</li>
 			
 			<li class="after">
 				<a href="#" onclick="show('predecessors'); return false;"><b>Can't be done until after...</b></a><br />
-				<div id="predecessors"<?=(count($this->predecessors) ? '' : ' class="hidden"')?>>
+				<div id="predecessors"<?php echo (count($this->predecessors) ? '' : ' class="hidden"')?>>
 					<?
 						foreach($this->tasks as $task)
 						{
@@ -83,8 +83,8 @@
 							$checked = (in_array($id,$this->predecessors));
 					?>
 						<p>
-							<input type="checkbox" value="<?=$id?>" name="predecessors[]" <?=($checked?'checked="checked"':'')?> />
-							<a href="task/<?=$id?>" target="_blank" title="<?=htmlspecialchars($desc)?>"><?=$title?></a>
+							<input type="checkbox" value="<?php echo $id?>" name="predecessors[]" <?php echo ($checked?'checked="checked"':'')?> />
+							<a href="task/<?php echo $id?>" target="_blank" title="<?php echo htmlspecialchars($desc)?>"><?php echo $title?></a>
 						</p>
 					<? } // End foreach predecessor ?>
 				</div>
@@ -103,8 +103,8 @@
 							$checked = (in_array($id,$this->successors));
 					?>
 						<p>
-							<input type="checkbox" value="<?=$id?>" name="successors[]" <?=($checked?'checked="checked"':'')?> />
-							<a href="task/<?=$id?>" target="_blank" title="<?=htmlspecialchars($desc)?>"><?=$title?></a>
+							<input type="checkbox" value="<?php echo $id?>" name="successors[]" <?php echo ($checked?'checked="checked"':'')?> />
+							<a href="task/<?php echo $id?>" target="_blank" title="<?php echo htmlspecialchars($desc)?>"><?php echo $title?></a>
 						</p>
 					<? } // End foreach predecessor ?>
 				</div>

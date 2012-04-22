@@ -1,8 +1,8 @@
-<?=$this->topBar?>
-<h1><?=$this->title?></h1>
+<?php echo $this->topBar?>
+<h1><?php echo $this->title?></h1>
 <div class="taskBody spacer">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	<table class="sortable highlight">
 		<thead>
 			<tr>
@@ -21,22 +21,22 @@
 		<tbody>
 		<?foreach($this->tasks as $task){?>
 			<tr>
-				<td><?=$task->id?></td>
+				<td><?php echo $task->id?></td>
 				<td>
 					<?if($task->statusID==3)echo'<strong>';?>
 					<?if($task->statusID>3)echo'<del>';?>
-					<a href="../task/<?=$task->id?>"><?=stripPad($task->name,50)?></a>
+					<a href="../task/<?php echo $task->id?>"><?php echo stripPad($task->name,50)?></a>
 					<?if($task->statusID>3)echo'</del>';?>
 					<?if($task->statusID==3)echo'</strong>';?>
 				</td>
-				<td><?=$task->type?></td>
-				<td><?=$task->reporter?></td>
-				<td><?=$task->developer?></td>
-				<td><?=$task->detailedBeforeMe?></td>
-				<td><?=$task->beforeMe?></td>
-				<td><?=$task->afterMe?></td>
-				<td><?=displayMinutes($task->time)?></td>
-				<td><?=$task->statusName?></td>
+				<td><?php echo $task->type?></td>
+				<td><?php echo $task->reporter?></td>
+				<td><?php echo $task->developer?></td>
+				<td><?php echo $task->detailedBeforeMe?></td>
+				<td><?php echo $task->beforeMe?></td>
+				<td><?php echo $task->afterMe?></td>
+				<td><?php echo displayMinutes($task->time)?></td>
+				<td><?php echo $task->statusName?></td>
 			</tr>
 		<?} // End foreach task ?>
 		</tbody>

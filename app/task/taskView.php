@@ -1,23 +1,23 @@
-<?=$this->topBar?>
-<h1><?=$this->title?></h1>
+<?php echo $this->topBar?>
+<h1><?php echo $this->title?></h1>
 <div class="taskBody spacer">
-	<?=$this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
-	<?=$this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
+	<?php echo $this->getError('<div class="note error"><span>!</span><p>%</p></div>')?>
+	<?php echo $this->getNote('<div class="note ok"><span>&#10003;</span><p>%</p></div>')?>
 	<?php $back = ($this->myTask? '' : '../'); // how many levels deep are we? ?>
 	<div class="description">
-		<?=($this->taskDescription ? $this->taskDescription : $this->taskName)?>
+		<?php echo ($this->taskDescription ? $this->taskDescription : $this->taskName)?>
 	</div>
 	<div class="details">
-		<h2>Details<small>[<a href="<?=$back?>report?edit=<?=$this->taskID?>">edit</a>]</small></h2>
+		<h2>Details<small>[<a href="<?php echo $back?>report?edit=<?php echo $this->taskID?>">edit</a>]</small></h2>
 		<ul>
-			<li>Status: <b><?=$this->taskStatus?></b></li>
-			<li>ID: <b><?=$this->taskID?></b></li>
-			<li>Type: <b><?=$this->taskType?></b></li>
-			<li>Reporter: <b><?=$this->taskReporterName?></b></li>
-			<li>Assigned To: <b><?=$this->taskDeveloper?></b></li>
-			<li>Estimated Development Time: <b><?=$this->taskEstDevTime?></b></li>
-			<li>Created: <b><?=$this->taskCreateTime?></b></li>
-			<li>Last Modified: <b><?=$this->taskUpdateTime?></b></li>
+			<li>Status: <b><?php echo $this->taskStatus?></b></li>
+			<li>ID: <b><?php echo $this->taskID?></b></li>
+			<li>Type: <b><?php echo $this->taskType?></b></li>
+			<li>Reporter: <b><?php echo $this->taskReporterName?></b></li>
+			<li>Assigned To: <b><?php echo $this->taskDeveloper?></b></li>
+			<li>Estimated Development Time: <b><?php echo $this->taskEstDevTime?></b></li>
+			<li>Created: <b><?php echo $this->taskCreateTime?></b></li>
+			<li>Last Modified: <b><?php echo $this->taskUpdateTime?></b></li>
 		</ul>
 
 		<?php
@@ -47,9 +47,9 @@
 	</div>
 	
 	<div class="comments">
-		<?=$this->comments?>
+		<?php echo $this->comments?>
 		<form method="post" action="">
-			<input type="hidden" name="taskID" value="<?=$this->taskID?>" />
+			<input type="hidden" name="taskID" value="<?php echo $this->taskID?>" />
 			<label>
 				Add Comment:<br />
 				<textarea name="newComment" rows="4" cols="45"></textarea>
@@ -60,6 +60,6 @@
 	</div>
 	
 	<div class="changeStatus">
-		<?=$this->changeStatusForm?>
+		<?php echo $this->changeStatusForm?>
 	</div>
 </div>
