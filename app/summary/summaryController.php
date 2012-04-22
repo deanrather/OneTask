@@ -85,6 +85,7 @@
 				);
 			}
 			
+			$timesBefore = array();
 			foreach ($chartArray as $key => $val)
 			{
 				$timesBefore[$key]=$val['timeBefore'];

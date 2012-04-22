@@ -162,7 +162,7 @@ SQL;
 				$taskObj->afterMe			= $this->getOppositeOfDependencies($taskObj->id,true);
 				$taskObj->afterMe			= $taskObj->afterMe[0]['COUNT(`task_id`)'];
 				$taskObj->detailedBeforeMe	= $this->getDependancies($taskObj->id);
-				$taskObj->beforeMe			= is_array($taskObj->detailedBeforeMe)? count($taskObj->detailedBeforeMe):0;
+				$taskObj->beforeMe			= is_array($taskObj->detailedBeforeMe) ? count($taskObj->detailedBeforeMe):0;
 				$temp = $taskObj->detailedBeforeMe;
 				$taskObj->detailedBeforeMe='';
 				if(is_array($temp))
